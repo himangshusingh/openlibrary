@@ -55,7 +55,3 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
   
   
 
-### this is how ui looks like
-
-
-![[Pasted image 20230311215228.png]]
