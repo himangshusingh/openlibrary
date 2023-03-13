@@ -55,5 +55,5 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
   
 ## This is how the angular ui looks
 
-https://user-images.githubusercontent.com/71934967/224742909-435a535e-70d5-4235-9dc0-e659d67e62e0.png
+![readmess](https://user-images.githubusercontent.com/71934967/224742909-435a535e-70d5-4235-9dc0-e659d67e62e0.png)
 
