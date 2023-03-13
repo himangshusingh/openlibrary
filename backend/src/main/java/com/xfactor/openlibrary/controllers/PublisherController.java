@@ -31,6 +31,7 @@ public class PublisherController {
     public Publisher savepublish(@RequestBody Publisher publish){   
         if(publish.getId() == null){
             Publisher publish1 = publisherRepository.save(publish);
+            return publish1;
         }
         return null;
     }
