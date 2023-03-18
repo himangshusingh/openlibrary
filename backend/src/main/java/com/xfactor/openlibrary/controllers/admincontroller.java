@@ -20,7 +20,7 @@ public class admincontroller {
 
     private AdminRepository adminRepository;
 
-    //ArrayList<admin> ladmin = new ArrayList<>();
+    //ArrayList<admin> ladmin = new ArrayList<a>();
     
     public admincontroller(AdminRepository adminRepository) {
         this.adminRepository = adminRepository;
