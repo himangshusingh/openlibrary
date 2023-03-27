@@ -9,8 +9,6 @@ Library Management Application
  - IDE (VSCode,Eclipse,IntelliJ IDEA)
 
 
-
-
 ## How to start the application
 ```
 $ git clone https://github.com/crkarthik11/openlibrary.git
