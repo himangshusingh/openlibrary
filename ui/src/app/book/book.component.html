@@ -1,12 +1,12 @@
 
 <h1 [ngClass]="isGreen? 'title-green':'title-red'" style="margin-top: 45px;">{{title}}</h1>
 
-<h2 *ngIf="books.length <1">No Data</h2>
+<h2 *ngIf="books.length <1 ">No Data</h2>
 
 <table style="margin-top: 60px;">
     <thead>
       <tr>
-        <!-- <th>ID</th> -->
+        
         <th>Title</th>
         <th>Author</th>
         <th>ISBN</th>
@@ -20,7 +20,7 @@
     </thead>
     <tbody *ngIf="books.length > 0">
       <tr *ngFor="let book of books">
-        <!-- <td>{{book.id}}</td> -->
+        
         <td>{{book.title}}</td>
         <td>{{book.author}}</td>
         <td>{{book.isbn}}</td>
@@ -35,16 +35,11 @@
   </table>
 
 
-  <div class="container_button">
-    <a href="#" class="button">
-      <div class="button__line"></div>
-      <div class="button__line"></div>
-      <span class="button__text">ENTRY</span>
-      <div class="button__drow1"></div>
-      <div class="button__drow2"></div>
-    </a>
-  
-  </div>
+  <button style="--clr:#790252; margin: 20px; float: right">
+    <span>Add Book</span>
+    <i></i>
+  </button>
+
 
   <!-- <div style= "margin: 20px; float:right">
     <button class="button"> Add Book</button>
