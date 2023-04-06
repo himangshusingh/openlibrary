@@ -28,7 +28,7 @@ public class StudentController {
         this.studentRepository = studentRepository;
     }
 
-    @PostMapping("/savedetailsofstudents")
+    @PostMapping("/savestudent")
     public Student savestuddetails(@RequestBody Student stud){   
         if(stud.getId() == null){
             Student stud1 = studentRepository.save(stud);
@@ -37,7 +37,7 @@ public class StudentController {
     return null;
     }
 
-    @PutMapping("/updatedetailsofstudents")
+    @PutMapping("/updatestudent")
     public Student updatestudentdetails(@RequestBody Student stud){
         if(stud.getId() != null ){
             Student stud1 = studentRepository.save(stud);
@@ -46,14 +46,14 @@ public class StudentController {
         return null;
     }
 
-    @GetMapping("/getAllstudentDetails")
+    @GetMapping("/getAllstudent")
     public List<Student> getAllstudentDetails(){
         return studentRepository.findAll();
     }
 
-    @GetMapping("findstudentbyId")
+    @GetMapping("findstudentbyId/{id}")
     //we use optional here
-    public Student findbyid(@PathVariable int id){
+    public Student findbyid(@PathVariable Long id){
         Optional<Student> optional = studentRepository.findById(id);
         if(optional.isPresent())
             return optional.get();
@@ -67,7 +67,7 @@ public class StudentController {
     }
 
     @DeleteMapping("/deleteentryofstudent/{id}")
-    public void deletebyid(@PathVariable int id){ //why delete by id is passing by int when we declalred id by Long
+    public void deletebyid(@PathVariable Long id){ //why delete by id is passing by int when we declalred id by Long
         studentRepository.deleteById(id);
     }
 }

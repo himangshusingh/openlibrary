@@ -8,6 +8,7 @@ import { AuthorComponent } from './author/author.component';
 import { AdminComponent } from './admin/admin.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HelloComponent } from './hello/hello.component';
+import { AddBooksComponent } from './add-books/add-books.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
     path: 'landingpage',
     component: HelloComponent,
   },
+  {
+    path: 'add-books',
+    component: AddBooksComponent,
+  }
 ];
 
 @NgModule({

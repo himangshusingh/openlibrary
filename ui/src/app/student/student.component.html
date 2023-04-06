@@ -1,2 +1,35 @@
-<p>student works!</p>
-<router-outlet></router-outlet>
+<h1 [ngClass]="isGreen? 'title-green':'title-red'" >{{title}}</h1>
+
+<h2 *ngIf="students.length<1">No Data</h2>
+
+<table style="margin-top: 60px;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Roll No.</th>
+        <th>BirthDate</th>
+        <th>Mobile No.</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="students.length > 0">
+      <tr *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.dept}}</td>
+        <td>{{student.rollNumber}}</td>
+        <td>{{student.birthDate}}</td>
+        <td>{{student.mobileNo}}</td>
+        <td>
+          <button (click)="deleteStudent(student.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class= "button" style="--clr:#790252; margin: 20px; float: right">
+    <span>Add Student</span>
+    <i></i>
+  </button>

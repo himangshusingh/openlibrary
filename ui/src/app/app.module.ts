@@ -11,6 +11,10 @@ import { PublisherComponent } from './publisher/publisher.component';
 import { AdminComponent } from './admin/admin.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HelloComponent } from './hello/hello.component';
+import { AddBooksComponent } from './add-books/add-books.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -22,11 +26,15 @@ import { HelloComponent } from './hello/hello.component';
     PublisherComponent,
     AdminComponent,
     SidenavComponent,
-    HelloComponent
+    HelloComponent,
+    AddBooksComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, 
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

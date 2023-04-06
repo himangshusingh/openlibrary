@@ -53,7 +53,7 @@ public class bookcontroller {
     }
 
     @GetMapping("/getbyid/{id}")
-    public Book findbyid(@PathVariable int id){
+    public Book findbyid(@PathVariable Long id){
         Optional<Book> optional= bookRepository.findById(id);
         if(optional.isPresent())
             return optional.get();
@@ -79,7 +79,8 @@ public class bookcontroller {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deletebyid(@PathVariable int id){
+    public void deleteBook(@PathVariable Long id)
+    {
         bookRepository.deleteById(id);
     }
 }
