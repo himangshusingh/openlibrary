@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
@@ -27,7 +28,7 @@ export class StudentComponent implements OnInit {
   }
 
   fetchAllStudents(){
-    this.http.get("http://localhost:8080/students/getAllStudents")
+    this.http.get('http://localhost:8080/student/getAllstudent')
     .subscribe(resp =>{
       this.students = resp;
       console.log('Students retrieved successfully:', this.students)
@@ -38,7 +39,7 @@ export class StudentComponent implements OnInit {
 
   deleteStudent(studentId:Number){
     
-    const url = 'http://localhost:8080/students/deleteStudents/' +studentId
+    const url = 'http://localhost:8080/student/deleteentryofstudent/' +studentId
     console.log(url)
     this.http.delete(url)
     .subscribe(resp => {

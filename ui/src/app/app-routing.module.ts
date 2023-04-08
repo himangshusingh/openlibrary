@@ -9,6 +9,11 @@ import { AdminComponent } from './admin/admin.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HelloComponent } from './hello/hello.component';
 import { AddBooksComponent } from './add-books/add-books.component';
+import { AddStudentsComponent } from './add-students/add-students.component';
+import { AddAuthorsComponent } from './add-authors/add-authors.component';
+import { AddPublishersComponent } from './add-publishers/add-publishers.component';
+import { AddAdminsComponent } from './add-admins/add-admins.component';
+import { AddLoansComponent } from './add-loans/add-loans.component';
 
 const routes: Routes = [
   {
@@ -46,6 +51,26 @@ const routes: Routes = [
   {
     path: 'add-books',
     component: AddBooksComponent,
+  },
+  {
+    path: 'add-students',
+    component: AddStudentsComponent, 
+  },
+  {
+    path: 'add-authors',
+    component: AddAuthorsComponent,
+  },
+  {
+    path: 'add-publishers',
+    component: AddPublishersComponent,
+  },
+  {
+    path: 'add-admins',
+    component: AddAdminsComponent,
+  },
+  {
+    path: 'add-loans',
+    component: AddLoansComponent,
   }
 ];
 

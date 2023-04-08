@@ -2,6 +2,7 @@ package com.xfactor.openlibrary.controllers;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -52,7 +53,7 @@ public class authorcontroller {
     }
 
     @GetMapping("/searchbyid/{id}")
-    public Author getAuthorbyId(@PathVariable int id){
+    public Author getAuthorbyId(@PathVariable Long id){
         Optional<Author> optional = authorRepository.findById(id);
         if(optional.isPresent())
             return optional.get();
@@ -65,8 +66,8 @@ public class authorcontroller {
         return authorRepository.count();
     }
 
-    @GetMapping("/deleteauthor/{id}")
-    public void deletebyid(@PathVariable int id){
+    @DeleteMapping("/deleteauthor/{id}")
+    public void deletebyid(@PathVariable Long id){
         authorRepository.deleteById(id);
     }
     

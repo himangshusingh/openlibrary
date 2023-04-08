@@ -27,7 +27,7 @@ public class PublisherController {
     }
 
 
-    @PostMapping("/savebook")
+    @PostMapping("/savepublisher")
     public Publisher savepublish(@RequestBody Publisher publish){   
         if(publish.getId() == null){
             Publisher publish1 = publisherRepository.save(publish);
@@ -51,7 +51,7 @@ public class PublisherController {
     }
 
     @GetMapping("getbyid/{id}")
-    public Publisher findbyid(@PathVariable int id){
+    public Publisher findbyid(@PathVariable Long id){
         Optional<Publisher> optional= publisherRepository.findById(id);
         if(optional.isPresent())
             return optional.get();
@@ -65,7 +65,7 @@ public class PublisherController {
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deletebyid(@PathVariable int id){
+    public void deletebyid(@PathVariable Long id){
         publisherRepository.deleteById(id);
     }
 }

@@ -1,2 +1,33 @@
-<p>author works!</p>
-<router-outlet></router-outlet>
+<h1 [ngClass]="isGreen? 'title-green':'title-red'" >{{title}}</h1>
+
+<h2 *ngIf="authors.length<1">No Data</h2>
+
+<table style="margin-top: 60px;">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>birthDate</th>
+        <th>Nationality</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="authors.length > 0">
+      <tr *ngFor="let author of authors">
+        <td>{{author.id}}</td>
+        <td>{{author.name}}</td>
+        <td>{{author.brithdate}}</td>
+        <td>{{author.nationality}}</td>
+        <td>
+          <button (click)="deleteAuthor(author.id)">Delete</button>
+          <br>
+          <button style="margin-top: 10px;">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class= "button" (click)="addAuthors()" style="--clr:#790252; margin: 20px; float: right">
+    <span>Add Author</span>
+    <i></i>0
+  </button>

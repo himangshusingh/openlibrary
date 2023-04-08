@@ -14,9 +14,9 @@ public class Loan {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
-    private int bookid;
+    private String bookid;
     @Column
-    private int studentid;
+    private String studentid;
     @Column
     private String checkoutdate;
     @Column
@@ -29,16 +29,16 @@ public class Loan {
     public void setId(Long id) {
         this.id = id;
     }
-    public int getBookid() {
+    public String getBookid() {
         return bookid;
     }
-    public void setBookid(int bookid) {
+    public void setBookid(String bookid) {
         this.bookid = bookid;
     }
-    public int getStudentid() {
+    public String getStudentid() {
         return studentid;
     }
-    public void setStudentid(int studentid) {
+    public void setStudentid(String studentid) {
         this.studentid = studentid;
     }
     public String getCheckoutdate() {

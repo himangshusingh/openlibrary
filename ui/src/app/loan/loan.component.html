@@ -1,2 +1,37 @@
-<p>loan works!</p>
-<router-outlet></router-outlet>
+<h1 [ngClass]="isGreen? 'title-green':'title-red'" >{{title}}</h1>
+
+<h2 *ngIf="loans.length<1">No Data</h2>
+
+<table style="margin-top: 60px;">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>BookId</th>
+        <th>StudentId</th>
+        <th>CheckoutDate</th>
+        <th>DueDate</th>
+        <th>ReturnDate</th>
+        <th>Actions </th>
+      </tr>
+    </thead>
+    <tbody *ngIf="loans.length > 0">
+      <tr *ngFor="let loan of loans">
+        <td>{{loan.id}}</td>
+        <td>{{loan.bookid}}</td>
+        <td>{{loan.studentid}}</td>
+        <td>{{loan.checkoutdate}}</td>
+        <td>{{loan.duedate}}</td>
+        <td>{{loan.returnDate}}</td>
+        <td>
+          <button (click)="deleteLoan(loan.id)">Delete</button>
+          <br>
+          <button style="margin-top: 10px;">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class= "button" (click)="addLoans()" style="--clr:#790252; margin: 20px; float: right">
+    <span>Add Loans</span>
+    <i></i>
+  </button>

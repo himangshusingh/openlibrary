@@ -14,6 +14,11 @@ import { HelloComponent } from './hello/hello.component';
 import { AddBooksComponent } from './add-books/add-books.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
+import { AddStudentsComponent } from './add-students/add-students.component';
+import { AddAuthorsComponent } from './add-authors/add-authors.component';
+import { AddPublishersComponent } from './add-publishers/add-publishers.component';
+import { AddAdminsComponent } from './add-admins/add-admins.component';
+import { AddLoansComponent } from './add-loans/add-loans.component';
 
 
 @NgModule({
@@ -27,7 +32,12 @@ import { HttpClientModule } from '@angular/common/http';
     AdminComponent,
     SidenavComponent,
     HelloComponent,
-    AddBooksComponent
+    AddBooksComponent,
+    AddStudentsComponent,
+    AddAuthorsComponent,
+    AddPublishersComponent,
+    AddAdminsComponent,
+    AddLoansComponent,
   ],
   imports: [
     BrowserModule,

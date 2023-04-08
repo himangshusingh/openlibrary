@@ -1,2 +1,34 @@
-<p>admin works!</p>
-<router-outlet></router-outlet>
+<h1 [ngClass]="isGreen? 'title-green':'title-red'" >{{title}}</h1>
+
+<h2 *ngIf="admins.length<1">No Data</h2>
+
+<table style="margin-top: 60px;">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Actions</th>
+
+      </tr>
+    </thead>
+    <tbody *ngIf="admins.length > 0">
+      <tr *ngFor="let admin of admins">
+        <td>{{admin.id}}</td>
+        <td>{{admin.name}}</td>
+        <td>{{admin.username}}</td>
+        <td>{{admin.password}}</td>
+        <td>
+          <button (click)="deleteAdmin(admin.id)">Delete</button>
+          <br>
+          <button style="margin-top: 10px;">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class= "button" (click)="addAdmins()" style="--clr:#790252; margin: 20px; float: right">
+    <span>Add Admin</span>
+    <i></i>
+  </button>

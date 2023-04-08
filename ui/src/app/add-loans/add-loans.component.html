@@ -1,0 +1,30 @@
+<div style="padding-left: 100px;">
+    <h1> Add Loans</h1>
+
+    <form [formGroup]="loansForm" (ngSubmit)="saveLoan()" >
+        <div>
+          <label for="bookid">Book Id:</label>
+          <input type="text" id="bookid" formControlName="bookid" />
+        </div>
+        <div>
+          <label for="studentid">Student Id:</label>
+          <input type="text" id="studentid" formControlName="studentid" />
+        </div>
+        <div>
+          <label for="checkoutdate">Checkout Date:</label>
+          <input type="text" id="checkoutdate" formControlName="checkoutdate" />
+        </div>
+        <div>
+          <label for="duedate">Due Date:</label>
+          <input type="text" id="duedate" formControlName="duedate" />
+        </div>
+        <div>
+          <label for="returnDate">Return Date:</label>
+          <input type="text" id="returnDate" formControlName="returnDate" />
+          </div>
+        <button type="submit">Save</button>
+      </form>
+</div>
+
+<h3> Form status: {{loansForm.valid}}</h3>
+<h3> Form json: {{loansForm.value | json}}</h3>

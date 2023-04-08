@@ -27,7 +27,7 @@ public class admincontroller {
     }
 
 
-    @PostMapping("/saveloansofstudents")
+    @PostMapping("/saveadmins")
     public admin saveadmindetails(@RequestBody admin admin1){   
         if(admin1.getId() == null){
             admin admin2 = adminRepository.save(admin1);
@@ -36,7 +36,7 @@ public class admincontroller {
         return null;
     }
 
-    @PutMapping("/updateloansofstudents")
+    @PutMapping("/updateadmins")
     public admin updateadmindetails(@RequestBody admin admin1){   
         if(admin1.getId() != null){
             admin admin2 = adminRepository.save(admin1);
@@ -47,13 +47,13 @@ public class admincontroller {
 
 
 
-    @GetMapping("/getAllloanDetails")
+    @GetMapping("/getAlladminDetails")
     public List<admin> getAllloans(){
         return adminRepository.findAll();
     }
 
     @GetMapping("getbyid/{id}")
-    public admin findbyid(@PathVariable int id){
+    public admin findbyid(@PathVariable Long id){
         Optional<admin> optional = adminRepository.findById(id);
         if(optional.isPresent())
             return optional.get();
@@ -67,7 +67,7 @@ public class admincontroller {
     }
 
     @DeleteMapping("/deletebyid/{id}")
-    public void deletebyid(@PathVariable int id){
+    public void deletebyid(@PathVariable Long id){
         adminRepository.deleteById(id);
     }
 

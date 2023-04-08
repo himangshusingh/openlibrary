@@ -49,7 +49,7 @@ public class Loancontroller{
     }
 
     @GetMapping("/getbyid/{id}")
-    public Loan findbyid(@PathVariable int id){
+    public Loan findbyid(@PathVariable Long id){
         Optional<Loan> optional= loanRepository.findById(id);
         if(optional.isPresent())
             return optional.get();
@@ -63,7 +63,7 @@ public class Loancontroller{
     }
 
     @DeleteMapping("deleteloanbyid/{id}")
-    public void deleteloanbyid(@PathVariable int id){
+    public void deleteloanbyid(@PathVariable Long id){
         loanRepository.deleteById(id);
     }
 }
