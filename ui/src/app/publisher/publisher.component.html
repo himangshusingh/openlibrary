@@ -10,7 +10,7 @@
         <th>Address</th>
         <th>Phone</th>
         <th>Email</th>
-        <th>Actions</th>
+        <th style="padding-left: 10%;">Actions</th>
 
       </tr>
     </thead>
@@ -22,9 +22,10 @@
         <td>{{publisher.phone}}</td>
         <td>{{publisher.email}}</td>
         <td>
-          <button (click)="deletePublisher(publisher.id)">Delete</button>
-          <br>
-          <button style="margin-top: 10px;">Update</button>
+          <div style="display: inline-flexbox" class="container">
+            <div style="margin-right: 20px;" class="btn"><a (click)="deletePublisher(publisher.id)">Delete</a></div>
+            <div  class="btn"><a href="#">Update</a></div>
+            </div>
         </td>
       </tr>
     </tbody>

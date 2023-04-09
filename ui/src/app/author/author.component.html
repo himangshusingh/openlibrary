@@ -9,7 +9,7 @@
         <th>Name</th>
         <th>birthDate</th>
         <th>Nationality</th>
-        <th>Actions</th>
+        <th style="padding-left: 16%;">Actions</th>
       </tr>
     </thead>
     <tbody *ngIf="authors.length > 0">
@@ -19,9 +19,10 @@
         <td>{{author.brithdate}}</td>
         <td>{{author.nationality}}</td>
         <td>
-          <button (click)="deleteAuthor(author.id)">Delete</button>
-          <br>
-          <button style="margin-top: 10px;">Update</button>
+          <div style="display: inline-flexbox" class="container">
+            <div style="margin-right: 20px;" class="btn"><a (click)="deleteAuthor(author.id)">Delete</a></div>
+            <div  class="btn"><a href="#">Update</a></div>
+            </div>
         </td>
       </tr>
     </tbody>

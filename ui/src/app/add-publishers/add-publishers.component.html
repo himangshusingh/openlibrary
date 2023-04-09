@@ -1,24 +1,32 @@
-<div>
-    <h1> Add Publishers</h1>
+<div class="title">Welcome</div>
+
+<div class="form">
+  <div class="subtitle">Add Publishers</div>
 
     <form [formGroup]="publishersForm" (ngSubmit)="savePublisher()" >
-        <div>
+        <div class="input-container ic1">
           <label for="name">Name:</label>
           <input type="text" id="name" formControlName="name" />
         </div>
-        <div>
+        <div class="input-container ic2">
           <label for="address">Address:</label>
           <input type="text" id="address" formControlName="address" />
         </div>
-        <div>
+        <div class="input-container ic2">
           <label for="phone">Phone:</label>
           <input type="text" id="phone" formControlName="phone" />
         </div>
-        <div>
+        <div class="input-container ic2">
           <label for="email">Mail Id:</label>
           <input type="text" id="email" formControlName="email" />
         </div>
-        <button type="submit">Save</button>
+        
+        <button style="margin-top: 50px;" type="submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span> Save
+        </button>
       </form>
 </div>
 

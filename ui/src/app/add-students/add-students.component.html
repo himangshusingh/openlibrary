@@ -1,29 +1,36 @@
-<div>
-    <h1> Add Students</h1>
+<div class="title">Welcome</div>
+
+<div class="form">
+  <div class="subtitle">Add Students</div>
 
     <form [formGroup]="studentsForm" (ngSubmit) = "saveStudent()" >
-        <div>
+        <div class="input-container ic1">
           <label for="name">Name:</label>
           <input type="text" id="name" formControlName="name" />
         </div>
-        <div>
+        <div class="input-container ic2">
           <label for="department">Department:</label>
           <input type="text" id="department" formControlName="department" />
         </div>
-        <div>
+        <div class="input-container ic2">
           <label for="rollNumber">Roll Number:</label>
           <input type="text" id="rollNumber" formControlName="rollNumber" />
         </div>
-        <div>
+        <div class="input-container ic2">
             <label for="brithDate">Birth Date:</label>
             <input type="text" id="brithDate" formControlName="brithDate" />
           </div>
-        <div>
+        <div class="input-container ic2">
           <label for="number">Mobile No:</label>
           <input type="text" id="number" formControlName="number" />
         </div>
 
-        <button type="submit">Save</button>
+        <button style="margin-top: 50px;" type="submit">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span> Save
+        </button>
       </form>
 </div>
 

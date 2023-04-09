@@ -10,7 +10,7 @@
         <th>Roll No.</th>
         <th>BirthDate</th>
         <th>Mobile No.</th>
-        <th>Actions</th>
+        <th style="padding-left: 12%;">Actions</th>
       </tr>
     </thead>
     <tbody *ngIf="students.length > 0">
@@ -21,9 +21,10 @@
         <td>{{student.brithDate}}</td>
         <td>{{student.number}}</td>
         <td>
-          <button (click)="deleteStudent(student.id)">Delete</button>
-          <br>
-          <button style="margin-top: 10px;">Update</button>
+          <div class="container">
+            <div style="margin-right: 20px;" class="btn"><a (click)="deleteStudent(student.id)">Delete</a></div>
+            <div class="btn"><a href="#">Update</a></div>
+            </div>
         </td>
       </tr>
     </tbody>

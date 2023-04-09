@@ -9,7 +9,7 @@
         <th>Name</th>
         <th>Username</th>
         <th>Password</th>
-        <th>Actions</th>
+        <th style="padding-left: 17%;">Actions</th>
 
       </tr>
     </thead>
@@ -20,9 +20,10 @@
         <td>{{admin.username}}</td>
         <td>{{admin.password}}</td>
         <td>
-          <button (click)="deleteAdmin(admin.id)">Delete</button>
-          <br>
-          <button style="margin-top: 10px;">Update</button>
+          <div style="display: inline-flexbox" class="container">
+          <div style="margin-right: 20px;" class="btn"><a (click)="deleteAdmin(admin.id)">Delete</a></div>
+          <div  class="btn"><a href="#">Update</a></div>
+          </div>
         </td>
       </tr>
     </tbody>

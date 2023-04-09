@@ -11,7 +11,7 @@
         <th>CheckoutDate</th>
         <th>DueDate</th>
         <th>ReturnDate</th>
-        <th>Actions </th>
+        <th  style="padding-left: 12%;">Actions </th>
       </tr>
     </thead>
     <tbody *ngIf="loans.length > 0">
@@ -23,9 +23,10 @@
         <td>{{loan.duedate}}</td>
         <td>{{loan.returnDate}}</td>
         <td>
-          <button (click)="deleteLoan(loan.id)">Delete</button>
-          <br>
-          <button style="margin-top: 10px;">Update</button>
+          <div class="container">
+            <div  style="margin-right: 20px;" class="btn"><a (click)="deleteLoan(loan.id)">Delete</a></div>
+            <div  class="btn"><a href="#">Update</a></div>
+            </div>
         </td>
       </tr>
     </tbody>

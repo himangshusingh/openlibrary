@@ -1,20 +1,30 @@
-<div>
-    <h1> Add Admins</h1>
+<div class="title">Welcome</div>
+
+<div class="form">
+  <div class="subtitle">Add Admins</div>
 
     <form [formGroup]="adminsForm" (ngSubmit)="saveAdmin()" >
-        <div>
+        <div class="input-container ic1">
           <label for="name">Name:</label>
           <input type="text" id="name" formControlName="name" />
         </div>
-        <div>
+        
+        <div class="input-container ic2">
           <label for="username">Username:</label>
           <input type="text" id="username" formControlName="username" />
         </div>
-        <div>
+        
+        <div class="input-container ic2">
           <label for="password">Password:</label>
           <input type="text" id="password" formControlName="password" />
         </div>
-        <button type="submit">Save</button>
+
+        <button style="margin-top: 50px;" type="submit">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span> Save
+    </button>
       </form>
 </div>
 
