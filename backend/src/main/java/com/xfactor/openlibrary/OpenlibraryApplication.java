@@ -43,7 +43,7 @@ public class OpenlibraryApplication {
 				"Application is running! Access URLs:\n\t" +
 				"Local: \t\t{}://localhost:{}{}\n\t" +
 				"External: \t{}://{}:{}{}\n\t" +
-				"\n----------------------------------------------------------",
+				"\n-----------------------------------------------------------",
 				protocol,
 				serverPort,
 				contextPath,
