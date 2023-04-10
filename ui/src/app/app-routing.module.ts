@@ -17,6 +17,10 @@ import { AddLoansComponent } from './add-loans/add-loans.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: HelloComponent,
+  },  
+  {
     path: 'books',
     component: BookComponent,
   },
